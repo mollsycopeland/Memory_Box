@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- basic setup for fonts + responsive view -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>memory box</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="stars-bg"></canvas>
+
+  <!-- nav bar for switching pages -->
+  <nav>
+    <ul>
+      <li><button onclick="location.href='index.html'" class="nav-btn">home</button></li>
+      <li><button onclick="location.href='view.html'" class="nav-btn">memories</button></li>
+     <li><button id="toggleMode" class="nav-btn">dark mode</button></li>
+    </ul>
+  </nav>
+
+  <!-- main memory form section -->
+  <main class="hero">
+    <section class="container">
+      <h1>memory box</h1>
+      <p class="subtitle">write something you want to remember.</p>
+      <textarea id="memoryInput" placeholder="type it here..."></textarea>
+
+      <!-- mood tags for vibes -->
+      <div class="mood-tags">
+        <label><input type="radio" name="mood" value="happy" checked> happy</label>
+        <label><input type="radio" name="mood" value="sad"> sad</label>
+        <label><input type="radio" name="mood" value="funny"> funny</label>
+        <label><input type="radio" name="mood" value="neutral"> neutral</label>
+      </div>
+
+      <button onclick="saveMemory()">save memory</button>
+    </section>
+  </main>
+
+  <footer></footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
